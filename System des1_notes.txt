@@ -1,0 +1,32 @@
+1)What is system design?
+
+So many of us understand from its name.. designing a system.
+But system design is not only this much.
+
+System design is defined as the process of designing the architecture, components and interfaces for a system so that it meets the end user requirements.
+
+2)How using system design we can maintain the structure of the project?
+
+System design is the second step in SDLC and can be divided into two complementary parts: LLD and HLD
+Using these two we maintain the structure of the projects.
+
+3)Importance of System Design.
+
+System design is important for anyone who is building a robust, scalable and efficient software application. IF building a large scale application then system design allows us to architect Solutions that can handle real-world complexities.
+It helps is maintaining the following:
+* Scalability and Reliability
+* Efficient resource management
+* Adaptability
+* Architectural understanding
+
+
+
+
+
+
+
+
+
+
+
+

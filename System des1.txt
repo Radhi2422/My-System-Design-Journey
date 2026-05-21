@@ -1,0 +1,7 @@
+Today I have learn
+* What is system design
+* How using system we can maintain the structure of a project.
+* Importance of system Design
+* LLD VS HLD
+* LRU Cache Implementation
+

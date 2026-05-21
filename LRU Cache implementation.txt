@@ -1,0 +1,92 @@
+using System;
+using System.Collections.Generic;
+
+public class Node
+{
+    public int Key;
+    public int Value;
+    public Node Prev;
+    public Node Next;
+
+    public Node(int key, int value)
+    {
+        Key = key;
+        Value = value;
+    }
+}
+
+public class LRUCache
+{
+    private readonly int capacity;
+    private Dictionary<int, Node> cache;
+
+    private Node head;
+    private Node tail;
+
+    public LRUCache(int capacity)
+    {
+        this.capacity = capacity;
+        cache = new Dictionary<int, Node>();
+
+        head = new Node(0, 0);
+        tail = new Node(0, 0);
+
+        head.Next = tail;
+        tail.Prev = head;
+    }
+
+    public int Get(int key)
+    {
+        if (!cache.ContainsKey(key))
+            return -1;
+
+        Node node = cache[key];
+
+        Remove(node);
+        InsertToFront(node);
+
+        return node.Value;
+    }
+
+    public void Put(int key, int value)
+    {
+        if (cache.ContainsKey(key))
+        {
+            Node existing = cache[key];
+            existing.Value = value;
+
+            Remove(existing);
+            InsertToFront(existing);
+        }
+        else
+        {
+            if (cache.Count == capacity)
+            {
+                Node lru = tail.Prev;
+
+                Remove(lru);
+                cache.Remove(lru.Key);
+            }
+
+            Node newNode = new Node(key, value);
+
+            InsertToFront(newNode);
+            cache[key] = newNode;
+        }
+    }
+
+    private void Remove(Node node)
+    {
+        node.Prev.Next = node.Next;
+        node.Next.Prev = node.Prev;
+    }
+
+    private void InsertToFront(Node node)
+    {
+        node.Next = head.Next;
+        node.Prev = head;
+
+        head.Next.Prev = node;
+        head.Next = node;
+    }
+}
