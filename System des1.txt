@@ -1,7 +1,15 @@
 Today I have learn
-* What is system design
-* How using system we can maintain the structure of a project.
-* Importance of system Design
-* LLD VS HLD
-* LRU Cache Implementation
-
+* Consistency, Availability, Reliability & Maintainability
+* Availability: What it refers to, measurement, importance, ways to achieve
+	 System availability vs asset availability
+	 Difference between availability and fault tolerance
+* Consistency: types of consistency, importance, challenges, strategies
+ 	 Advance concepts and tradeoffs for consistency
+* Consistency Pattern: Types, importance and challenges
+* CAP Theorem: About, Trade offs
+	 Use cases.
+* Reliability: About, factors affecting, ways to improve reliability
+	 Reliability vs Availability
+	 Ways to measure, reasons for system failure
+	 SPOF(also ways to avoid SPOF)
+* Fault tolerance

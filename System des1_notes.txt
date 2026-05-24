@@ -1,23 +1,93 @@
-1)What is system design?
+Availability: What it refers to, measurement, importance, ways to achieve
 
-So many of us understand from its name.. designing a system.
-But system design is not only this much.
+Availability is how often a system or service is operational when a user needs it. It measures the percentage of time a system remains functional without failures or downtime.
+- Ensures users can access the system whenever required, and keeps services running using backup systems or replicas even if one component fails.
+- recovery mechanisms help restore services quickly after failures, maintaining availability and minimizing downtime.
 
-System design is defined as the process of designing the architecture, components and interfaces for a system so that it meets the end user requirements.
 
-2)How using system design we can maintain the structure of the project?
+Measurement of Availability:
+Availability(%)= (Uptime/(Uptime+Downtime))*100
 
-System design is the second step in SDLC and can be divided into two complementary parts: LLD and HLD
-Using these two we maintain the structure of the projects.
+Importance of availability:
+Availability is important as it ensures that systems and services remain accessible and reliable for users and businesses.
+* User Experience: Availability ensures that users can access the system and its services whenever needed. Frequent downtime can frustrate users and reduce overall satisfaction.
+* Business Continuity: High availability helps maintain continuous operations and prevents financial loss, reputational damage and legal issues caused by system outages.
+* Service level agreements: Organizations commit to specific uptime targets through SLAs and failure to meet them can lead to penalties or contractual consequences.
+* Competitive Advantage:
+* Disaster recovery
+* Regulatory Compliance:
 
-3)Importance of System Design.
 
-System design is important for anyone who is building a robust, scalable and efficient software application. IF building a large scale application then system design allows us to architect Solutions that can handle real-world complexities.
-It helps is maintaining the following:
-* Scalability and Reliability
-* Efficient resource management
-* Adaptability
-* Architectural understanding
+Ways to achieve high Availability:
+1)Redundancy:  Use redundant servers or components so that in the event of a failure, another can take over without any problems. Data centers, networking and hardware redundancy are a few examples of this.
+2) Load Balancing: Incoming requests are divided among several servers or resources to enhance system performance and fault tolerance while avoiding overload on any one part.
+3) Failover mechanisms: Implementing automated processes to detect failures and switch to redundant systems without manual intervention.
+
+4)Disaster recovery: Having a comprehensive plan in place to recover the system in case of a catastrophic event that affects the primary infrastructure.
+
+5)Monitoring and alerting: Putting in place reliable monitoring systems that can identify problems instantly and alert administrators so they can act quickly.
+6)Performance optimization: Lowering the possibility of bottlenecks and breakdowns by making sure the system is built and adjusted to efficiently manage the expected load.
+
+7)Scalability: Designing the system to scale easily by adding more resources when needed to accommodate increased demand.
+
+
+
+System Availability vs Asset reliability: These are related concepts in system design, but they focus on different aspects of system performance and stability.
+
+Difference between Availability and Fault tolerance:
+----
+
+High availability in system design:
+high availability in system design means a system remains operational and accessible most of the time, even during failures. It is typically measured using uptime percentages like 99% or 99.9%. 
+
+Methods to measure High availability:
+1) Mean Time Between Failures(MTBF):
+If a server runs for 1,000 hours and fails 5 times, the MTBF would be 200 hours, meaning the system runs on average for 200 hours before a failure occurs.
+
+2)Mean Time to Repair(MTTR):
+ If a server failure takes 2 hours to fix and restore service, the MTTR for that incident is 2 hours.
+
+Redundancy Architectures for high availability:
+It ensures high availability by running multiple system instances so that if one fails, another can continue serving users. It is often combined with data replication to keep data copies across multiple servers for reliability.
+
+Hot-Cold architecture:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

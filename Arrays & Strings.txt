@@ -1,0 +1,6 @@
+
+Two-pointer technique, sliding window
+Subarray problems (maximum subarray, subarray with given sum)
+String manipulation (substring, palindrome, anagram)
+Matrix operations (rotation, spiral traversal)
+Trees & Graphs
